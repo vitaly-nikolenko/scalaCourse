@@ -33,8 +33,7 @@ object Main {
           if (currentChar == '(') openBracketCount + 1
           else if (currentChar == ')') openBracketCount - 1
           else openBracketCount
-        if (opened >= 0) balanced(chars.tail, opened)
-        else false
+        opened >= 0 && balanced(chars.tail, opened)
       }
     }
 
